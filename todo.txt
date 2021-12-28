@@ -1,2 +1,0 @@
-Footer
-Navbar mobile burger
