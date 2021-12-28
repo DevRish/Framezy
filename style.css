@@ -150,7 +150,7 @@ nav button{
 .ctabtns button {
     border-style: none;
     /* background-color: rgb(94, 40, 40); */
-    background-color: #BFA5A5;
+    background-color: #cfb9b9;
     /* color: white; */
     color: rgb(46, 8, 8);
     border-radius: 10px;
@@ -160,6 +160,10 @@ nav button{
     margin-top: 2rem;
     margin-right: 2rem;
     cursor: pointer;
+}
+.ctabtns #secondary {
+    color: rgb(214, 214, 214);
+    background-color: rgb(97, 41, 41);
 }
 .ctabtns button:hover {
     transform: scale(1.1);
@@ -330,7 +334,7 @@ nav button{
 .mobile-menu .mobmenubtn {
     width: 100%;
     color: rgb(46, 8, 8);
-    font-size: 4rem;
+    font-size: 2.5rem;
     padding: 3rem;
     border-style: none;
     background-color: white;
@@ -446,8 +450,8 @@ nav button{
         padding-bottom: 15vh;
     }
     .mobile-menu button {
-        font-size: 2rem;
-        padding: 1rem;
+        font-size: 1.5rem;
+        padding: 2rem;
     }
 }
 
