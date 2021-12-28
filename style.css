@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Licorice&family=Poppins:wght@500&display=swap');
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Poppins, sans-serif;
+    overflow-y: overlay; /* Sothat scrollbar doesnot take up space, becomes like position absolute */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(to bottom right, rgb(46, 8, 8) 20%, rgb(80, 25, 25), rgb(46, 8, 8));
+    position: relative;
+    /* height: 100vh; */
+    height: fit-content;
+    padding-bottom: 15vh;
+}
+
+#totopbtn {
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    color: rgb(214, 214, 214);
+    background-color: rgb(80, 25, 25);
+    border-style: none;
+    border-radius: 50%;
+    font-size: 3rem;
+    z-index: 20;
+    height: 7rem;
+    width: 7rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav { 
+    width: 100vw;
+}
+nav .container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 0 2rem;
+    /* border: 2px solid black; */
+}
+nav .brand {
+    font-size: 3rem;
+    color: white;
+    cursor: default;
+    padding: 1.5rem 0;
+    /* text-shadow: 0.6rem 0.6rem black; */
+}
+nav .menu {
+    list-style: none;
+    display: flex;
+}
+nav li {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem 2.5rem;
+    color: white;
+}
+nav li:hover {
+    background-color: white;
+    color: rgb(46, 8, 8);
+    border-bottom: 0.5rem solid rgb(46, 8, 8);
+}
+nav button{
+    background: none;
+    width: 100%;
+    height: 100%;
+    border-style: none;
+    color: inherit;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+}
+
+.hero {
+    max-width: 1100px;
+    width: 100%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.heroimg, .benefit-img, .form-img {
+    /* border: 2px solid black; */
+    z-index: 5;
+    order: 2;
+}
+.heroimg img, .benefit img, .getquote img {
+    max-height: 60vh;
+    display: block;
+    margin: 2rem auto;
+    box-shadow: 1.5rem 1.5rem 0.75rem black;
+    z-index: 5;
+}
+.benefit img {
+    box-shadow: 0 0 4.5rem grey;
+}
+.getquote img {
+    box-shadow: none;
+    max-width: 30vw;
+    margin: 4rem auto;
+}
+.cta, .benefit .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid black; */
+    position: relative;
+    padding: 0 10%;
+    z-index: 5;
+    cursor: default;
+    order: 1;
+}
+.getquote .desc {
+    padding: 0 10%;
+}
+.cta h1 {
+    color: white;
+    font-size: 3.8rem;
+    text-shadow: 0.65rem 0.65rem 0.5rem black;
+    margin-bottom: 2rem;
+    /* font-family: Licorice; */
+}
+.cta p {
+    color: rgb(214, 214, 214);
+    font-size: 1.8rem;
+}
+.ctabtns { display: flex; }
+.ctabtns button {
+    border-style: none;
+    /* background-color: rgb(94, 40, 40); */
+    background-color: #BFA5A5;
+    /* color: white; */
+    color: rgb(46, 8, 8);
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.ctabtns button:hover {
+    transform: scale(1.1);
+}
+
+.benefit .container {
+    max-width: 1100px;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* border: 2px solid black; */
+}
+.benefit {
+    width: 100vw;
+    margin: 0;
+}
+.benefit:nth-child(even) {
+    background-color: rgb(46, 8, 8);
+}
+.benefit img {
+    max-height: 50vh;
+}
+.benefit:nth-child(even) .benefit-img { order: 1; }
+.benefit:nth-child(even) .desc { order: 2; }
+.benefit .desc h2 {
+    color: rgb(80, 25, 25);
+    font-size: 3rem;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+}
+.benefit:nth-child(even) h2 { color: rgb(214, 214, 214); }
+.benefit .desc p {
+    color: #af8989;
+    font-size: 2rem;
+} 
+.benefit:nth-child(even) p { color: #BFA5A5; }
+
+.getquote {
+    background-color: rgb(46, 8, 8);
+    width: 100vw;
+}
+.getquote .container {
+    max-width: 1100px;
+    width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4rem 0;
+    /* border: 2px solid red; */
+}
+.getquote h2 {
+    font-size: 3rem;
+    line-height: 3.25rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+.orderform {
+    display: flex;
+    flex-direction: column;
+}
+.orderform label {
+    color: rgb(214, 214, 214);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.orderform input {
+    height: 3rem;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.orderform textarea {
+    height: 9rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+.orderform button {
+    width: 40%;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: auto;
+    background-color: white;
+    color: rgb(46, 8, 8);
+    border-style: none;
+    cursor: pointer;
+}
+.orderform button:hover {
+    transform: scale(1.1);
+}
+#yourpainting { 
+    padding: 0;
+    color: rgb(214, 214, 214);
+}
+#reply {
+    color: rgb(214, 214, 214);
+    font-size: 1.5rem;
+    margin-top: 5rem;
+}
+
+.testimonials .container {
+    max-width: 1100px;
+    width: 100vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 4rem 0;
+}
+.testimonials h1, .testimonials h4 {
+    width: 100%;
+    text-align: center;
+    color: rgb(80, 25, 25);
+}
+.testimonials h1 { font-size: 6rem; }
+.testimonials h4 { font-size: 1.8rem; }
+
+.contactus {
+    width: 100vw;
+    background-color: rgb(46, 8, 8);
+}
+.contactus .container {
+    max-width: 1100px;
+    width: 100vw;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+.contactus .container h1 {
+    text-align: center;
+    color: rgb(214, 214, 214);
+    margin-bottom: 4rem;
+}
+.contact {
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* border: 2px solid black; */
+}
+.contact h3 {
+    color: rgb(214, 214, 214);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#burger{
+    display: none;
+}
+.mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100vh;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 1s;
+    z-index: 99;
+    opacity: 1;
+}
+.mobile-menu .mobmenubtn {
+    width: 100%;
+    color: rgb(46, 8, 8);
+    font-size: 4rem;
+    padding: 3rem;
+    border-style: none;
+    background-color: white;
+    border-bottom: 2px solid gray;
+}
+.mobile-menu .mobmenubtnarrow {
+    font-size: 4rem;
+    padding: 3rem;
+    background-color: white;
+    color: rgb(46, 8, 8);
+    border-style: none;
+    border-bottom: 2px solid gray;
+}
+
+.hide {
+    display: none;
+}
+
+@media (max-width: 910px) {
+    html {
+        font-size: 55%;
+    }
+    header {
+        padding-bottom: 20vh;
+    }
+    nav .menu {
+        display: none;
+    }
+    .hero, .benefit .container, .getquote .container {
+        display: block;
+    }
+    .heroimg img, .benefit img {
+        max-height: 45vh;
+        display: block;
+        margin: 2rem auto;
+        box-shadow: 1rem 1rem 0.5rem black;
+        z-index: 5;
+    }
+    .benefit img {
+        box-shadow: 0 0 4.5rem grey;
+    }
+    .ctabtns {
+        flex-direction: column;
+        width: 100%;
+    }
+    .ctabtns a {
+        width: 100%;
+    }
+    .cta h1, .cta p, .ctabtns {
+        margin: 1rem auto;
+    }
+    .cta h1, .cta p, .benefit h2, .benefit p {
+        width: 100%;
+    }
+    .wave {
+        z-index: 0;
+    }
+    .benefit .desc {
+        margin-bottom: 5rem;
+    }
+    .testimonials .container {
+        display: block;
+        padding: 0;
+    }
+    .testimonials .card{
+        width: 80%;
+        margin: 3rem auto;
+    }
+    .orderform button {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    .getquote img {
+        max-width: 70vw;
+    }
+    #burger {
+        display: block;
+        height: fit-content;
+        width: fit-content;
+        font-size: 4rem;
+        padding: 2rem 0;
+        background: none;
+        border-style: none;
+        margin-right: 2rem;
+        color: white;
+    }
+    #reply {
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding-bottom: 15vh;
+    }
+    .mobile-menu button {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+}
+
+/* Scroll bar */
+@media (min-width: 750px)
+{
+  ::-webkit-scrollbar {
+    width: 14px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(26, 2, 2); 
+    border-radius: 7px;
+  } 
+}

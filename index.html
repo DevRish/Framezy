@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>iFrame | Frame your images</title>
+</head>
+<body>
+    <button id="totopbtn" onclick="scrollToElement('home')"><i class="fas fa-arrow-up"></i></button>
+    <header id="home">
+        <nav>
+            <div class="container" style="height: 100%">
+                <div class="brand">
+                    <i class="fas fa-image"></i> Framezy
+                </div>
+                <button id="burger" onclick="showMenu()"><i class="fas fa-bars"></i></button>
+                <ul class="menu">
+                    <li><button onclick="scrollToElement('home')">Home</button></li>
+                    <li><button onclick="scrollToElement('order')">Order</button></li>
+                    <li><button onclick="scrollToElement('contact')">Contact</button></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mobile-menu" id="mobile-menu">
+            <button class="mobmenubtnarrow" onclick="hideMobileMenu()"><i class="fas fa-arrow-right"></i></button>
+            <button class="mobmenubtn" onclick="scrollToElement('home'); hideMobileMenu();">Home</button>
+            <button class="mobmenubtn" onclick="scrollToElement('order'); hideMobileMenu();">Order</button>
+            <button class="mobmenubtn" onclick="scrollToElement('contact'); hideMobileMenu();">Contact</button>
+        </div>
+        <div class="hero">
+            <div class="cta" data-aos="fade-up" data-aos-duration="3000">
+                <h1>Get your artwork framed from the comfort of your home</h1>
+                <p>We offer multiple framing options to suit your taste and decor. All our frames are handcrafted to perfection. </p>
+                <div class="ctabtns">
+                    <button onclick="scrollToElement('order')">Get a quote</button>
+                    <button onclick="scrollToElement('contact')">Contact Us</button>
+                </div>
+            </div>
+            <div class="heroimg">
+                <img src="Monalisa.jpg" alt="DaVinciArt" data-aos="zoom-in" data-aos-duration="3000">
+            </div>
+        </div>
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,288L24,288C48,288,96,288,144,272C192,256,240,224,288,208C336,192,384,192,432,208C480,224,528,256,576,272C624,288,672,288,720,256C768,224,816,160,864,122.7C912,85,960,75,1008,101.3C1056,128,1104,192,1152,202.7C1200,213,1248,171,1296,149.3C1344,128,1392,128,1416,128L1440,128L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path></svg>
+    </header>
+    <div class="benefits">
+        <div class="benefit">
+            <div class="container">
+                <div class="desc" data-aos="fade-up" data-aos-duration="3000">
+                    <h2>Custom designs considering your taste</h2>
+                    <p>We will design the best frame that meets your taste and adds to the beauty of your picture</p>
+                </div>
+                <div class="benefit-img"><img src="Painting_1.jpg" alt="CustomFrame" data-aos="zoom-in" data-aos-duration="3000"></div>
+            </div>
+        </div>
+        <div class="benefit">
+            <div class="container">
+                <div class="desc" data-aos="fade-up" data-aos-duration="3000">
+                    <h2>Sturdy frames made with the best quality materials</h2>
+                    <p>Get strong and long-lasting frames that protect your paintings from damage and decay</p>
+                </div>
+                <div class="benefit-img"><img src="Painting_2.jpg" alt="SturdyFrame" data-aos="zoom-in" data-aos-duration="3000"></div>
+            </div>
+        </div>
+        <div class="benefit">
+            <div class="container">
+                <div class="desc" data-aos="fade-up" data-aos-duration="3000">
+                    <h2>Fast and reliable delivery</h2>
+                    <p>We will frame and deliver to your home. All packaging is done with great care for safe delivery of your framed painting</p>
+                </div>
+                <div class="benefit-img"><img src="packing.jpg" alt="ReliableDelivery" data-aos="zoom-in" data-aos-duration="3000"></div>
+            </div>
+        </div>
+    </div>
+    <div class="getquote" id="order">
+        <div class="container">
+            <div class="desc" data-aos="fade-right" data-aos-duration="3000">
+                <h2>Send us your details and get your painting framed</h2>
+                <div class="orderform" id="orderform">
+                    <label for="youremail">Email: </label>
+                    <input type="email" id="youremail" placeholder="Email">
+                    <label for="yourpainting">Your painting: </label>
+                    <input type="file" id="yourpainting">
+                    <label for="yourthoughts">Your design requirements: </label>
+                    <textarea id="yourthoughts" cols="30" rows="10" placeholder="Describe what kind of design you want"></textarea>
+                    <button onclick="issubmitted()">Get Quote</button>
+                </div>
+                <h3 class="hide" id="reply">
+                    <p style="width: 100%; text-align: center; font-size: 5rem;"><i class="fas fa-check-circle"></i></p> <br>
+                    Thanks for your message! We will get back to you soon
+                </h3>
+            </div>
+            <div class="form-img"><img src="ArtMuseum.svg" alt="ArtGallery" data-aos="fade-left" data-aos-duration="3000"></div>
+        </div>
+    </div>
+    <div class="testimonials">
+        <div class="container">
+            <div class="card" data-aos="zoom-in" data-aos-duration="3000">
+                <h1><i class="fas fa-check-circle"></i></h1>
+                <h4>Over 100K completed orders</h4>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-duration="3000">
+                <h1><i class="fas fa-user-friends"></i></h1>
+                <h4>Over 8K monthly customers</h4>
+            </div>
+            <div class="card" data-aos="zoom-in" data-aos-duration="3000">
+                <h1><i class="fas fa-handshake"></i></h1>
+                <h4>100% customer satisfaction</h4>
+            </div>
+        </div>
+    </div>
+    <div class="contactus" id="contact">
+        <div class="container">
+            <h1>Have a query? Reach out to us at: </h1>
+            <div class="contact">
+                <h3><i class="fas fa-map-marker-alt"></i> 123, Random Street, City, State, India.</h3>
+                <h3><i class="fas fa-phone-alt"></i> 8905611746</h3>
+                <h3><i class="fas fa-envelope"></i> framezy@gmail.com</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Animate on scroll -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const issubmitted = () => {
+            let form = document.getElementById("orderform");
+            let reply = document.getElementById("reply");
+            form.classList.add("hide");
+            reply.classList.remove("hide");
+        }
+        const showMenu= () => {
+            let mobmenu = document.getElementById("mobile-menu");
+            mobmenu.style.display = "flex";
+            mobmenu.style.transform = "translateX(0%)";
+        }
+        const hideMobileMenu = () => {
+            let mobmenu = document.getElementById("mobile-menu");
+            mobmenu.style.transform = "translateX(100%)";
+            //mobmenu.style.display = "none";
+        }
+        const scrollToElement = (eleid) => {
+            let ele = document.getElementById(eleid);
+            ele.scrollIntoView({
+                behavior: "smooth"
+            })
+        }
+        let topbtn = document.getElementById("totopbtn");
+        if(window.scrollY<500) topbtn.style.display = "none";
+        window.onscroll = function() {scrollFunction()};
+        const scrollFunction = () => {
+            if(window.scrollY<500) topbtn.style.display = "none";
+            else topbtn.style.display = "block";
+        }
+    </script>
+</body>
+</html>
